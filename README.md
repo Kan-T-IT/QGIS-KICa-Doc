@@ -2,16 +2,16 @@
 
 ## Instalacion
 
-Clone the repo
+Clona el repo
 
 ```bash
 git clone https://github.com/Kan-T-IT/QGIS-imagery-catalogue-usage-guide.git
 ```
 
-### Environment and dependencies:
+### Entorno y dependencias:
 
 ```bash
 virtualenv -p python3.10 env3
-. env3/bin/activate
+source env3/bin/activate
 pip install mkdocs
 ```
