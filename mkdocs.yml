@@ -1,0 +1,6 @@
+site_name: Plugin Kan Imagery Catalog
+site_url: https://example.com/
+nav:
+  - Home: index.md
+  - Guia de Usuario: user_guide_kic.md
+theme: readthedocs
