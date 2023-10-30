@@ -1,17 +1,20 @@
-# Guia de usuario de Plugin Kan Imagery Catalog
+# User Guide Kan Imagery Catalog Plugins
 
-## Instalacion
 
-Clona el repo
+
+## Instalation
+
+Clona of repositorio
 
 ```bash
 git clone https://github.com/Kan-T-IT/QGIS-imagery-catalogue-usage-guide.git
 ```
 
-### Entorno y dependencias:
+### Environment and dependency:
 
 ```bash
 virtualenv -p python3.10 env3
 source env3/bin/activate
 pip install mkdocs
 ```
+

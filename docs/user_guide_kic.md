@@ -1,117 +1,110 @@
-# Guía de Usuario
+# User Guide
 
-## Instalación del complemento
-Descargar el plugin comprimido desde este link.
-Una vez descargado, abrir el QGIS (es recomendable que sea la última versión estable).
-En la barra de herramientas, ir a Plugins y a “Gestionar e Instalar Plugins”.
+## Welcome 
+Welcome to the user manual of the QGIS plugin Kan Imagery Catalog, developed by Kan Territory & IT to consult availability of images in an area in an agnostic way, having as main objective to solve the need and not to focus on suppliers. In the beginning, satellite imagery providers (free and commercial) are incorporated, but it was planned to incorporate drone imagery among others.
 
-Allí se abrirá una ventana como la siguiente:
+## Purpose of the document
+This document is intended as a user guide for anyone interested in using the Kan Imagery Catalog QGIS plugin.
 
 
-Para instalar el plugin, hay que dirigirse hacia “Instalar desde un ZIP” y seleccionar desde nuestro disco local la ubicación del zip descargado anteriormente.
+## Plugin Installation
+1. Download the compressed plugin from [this link](link).
+2. Once downloaded, open QGIS (it is recommended to use the latest stable version).
+3. In the toolbar, go to **Plugins** and select "Manage and Install Plugins."
 
-Una vez cargado, clickear en “Instalar Plugin” y esperar el tiempo que tarde. Una vez que se instale, aparecerá el ícono de “Kan Imagery Catalog” como también en la barra de herramientas Plugins > Kan Imagery Catalog.
+   A window like the following will open:
 
+   ![Plugin Window](../image/plugin_window.png)
+
+4. To install the plugin, you need to go to "Install from ZIP" and select the location of the previously downloaded ZIP file from your local disk.
+5. Once loaded, click on "Install Plugin" and wait for it to finish installing. Once installed, you will see the "Kan Imagery Catalog" icon in the "Plugins" toolbar.
 
 ## Plugin
-Al abrir el plugin de Kan Imagery Catalog, se desplegará sobre la derecha de la pantalla del QGIS con el siguiente orden:
+When you open the Kan Imagery Catalog plugin, it will appear on the right side of the QGIS screen with the following sections:
 
+- **Configuration**
+- **Search Area**
+- **Catalog Selection**
+- **Filters**
+- **Listing**
 
-+ Configuración
-+ Área de búsqueda
-+ Selección de catálogos
-+ Filtros
-+ Listado
+### Configuration
+To use the Kan Imagery Catalog plugin, the first thing to do is to configure the credentials that will be used to connect to different image providers.
 
-### Configuración
-Para hacer uso del plugin Kan Imagery Catalog, lo primero que hay que hacer es configurar las credenciales que se usarán para conectarse a los distintos proveedores de imágenes.
+#### Credentials
+- At this point, we will proceed with configuring the credentials for UP42. To proceed, you need a username and password on the provider's platform. To sign up, you can visit [https://console.up42.com/log-in](https://console.up42.com/log-in).
+- Once you have enabled your user and loaded the first project, you can access the information required by the plugin to use it.
 
-#### Credenciales
-En este momento, avanzaremos con la configuración de las credenciales para UP42. Para poder avanzar es necesario contar con un usuario y contraseña en la plataforma del proveedor. Para registrarse, puedes ingresar a https://console.up42.com/log-in.
-Una vez que hayas habilitado tu usuario y hayas cargado el primer proyecto, podrás acceder a la información solicitada por el plugin para poder utilizarlo.
+- The plugin requests the following information to connect to the provider:
+  - **Project ID**
+  - **API ID**
 
-Para conectarse con el proveedor, el plugin solicita la siguiente información:
-+ Project ID
-+ API ID
+  *Help:* You can find this information on the UP42 portal > Projects > Developers.
 
-*Ayuda:* estos datos se encuentran en el portal de UP42 > Projects > Developers.
+- After loading the necessary data, you can verify the credentials.
 
-Habiendo cargado los datos necesarios, puede verificarse las credenciales.
+  - If they are valid, you will see the message **"Credentials are valid."**
 
-De ser válidas, aparecerá la leyenda **“Las credenciales son válidas”**.
+#### General Parameters
+- In addition to loading credentials, the user can set the following parameters:
+  - **Language:** Choose from Spanish, English, or Portuguese.
+  - **Number of Query Days**
+  - **Default Maximum Cloud Cover:** Can vary between 0 and 100%.
+  - **Download Path**
+  - **Maximum Number of Catalogs**
+  - **Maximum Number of Objects per Catalog**
 
-#### Parámetros Generales
-A parte de cargar las credenciales, el usuario puede setear los siguientes parámetros:
-+ **Idioma:** seleccionar Español, Inglés o Portugués.
-+ **Cantidad de días de consulta**
-+ **Nubosidad máxima por defecto:** puede variar entre 0 y 100%.
-+ **Ruta de descarga**
-+ **Cantidad máxima de catálogos** 
-+ **Cantidad máxima de objetos por catálogo**
+- Once the general parameters are set, apply the changes by clicking **OK**.
 
-Establecidos los parámetros generales, aplicar los cambios mediante **Aceptar**.
+### Search Area
+- With the search area, the user can define the bounding box over which the plugin will search for image availability.
+- You can use the extent of what is currently visible in QGIS, meaning you can use "Use the visible area on the screen" in this case, or you can select a polygon geometry layer used in the current QGIS project.
 
-### Área de búsqueda
-Con el área de búsqueda, el usuario puede delimitar la zona (bounding box) sobre la que el plugin buscará disponibilidad de imágenes.
-Puede utilizarse la extensión de lo que se está viendo en el QGIS, es decir, en este caso se usaría “Usar área visible en pantalla”, o bien se puede seleccionar una capa de geometría de tipo polígono que esté siendo usada en el presente proyecto de QGIS.
+### Catalog Selection
+- In this section, the user can select the catalogs and collections they want to query.
 
+- In the search by name or description field, the user can filter by the value they enter. If left blank and filtered, all catalogs from the provider(s) being queried will be listed.
+- For example, if you enter "Sentinel" in the search field and filter:
 
-### Selección de catálogos
-En este apartado, el usuario podrá seleccionar los catálogos y las colecciones que se quieran consultar.
+  - By selecting the catalog in the first window and clicking "Add Selected," the collections will move to the second window. To proceed with these preferences, click "OK."
 
-En el buscador por nombre o descripción, el usuario puede filtrar por el valor que escriba. En caso de dejarlo en blanco y filtrar, se enlistarán todos los catálogos del/de los proveedor/es que se esté consultando.
-Por ejemplo, si colocamos “Sentinel” en el buscador y filtramos:
+#### Remove Catalogs and Collections
+- If the user wants to exclude the collections they had previously set, they should reopen the Catalog Selection window, select the "Selected Collections," and remove them before clicking OK to save the changes.
 
-Al seleccionar el catálogo en la primera ventana y clickeando “Agregar seleccionadas”, las colecciones pasarán a la segunda ventana. Para avanzar con estas preferencias, clickear en “Aceptar”.
+### Filters
+- Before searching for collections, you can set various supplementary search criteria:
+  - Start Date
+  - End Date
+  - Cloud Cover
+  - Record Limit
 
-#### Eliminar catálogos y colecciones
-En caso que el usuario quiera no consultar las colecciones que había establecido con anterioridad, deberá volver a abrir la ventana de Selección de Catálogos, seleccionar las “Colecciones seleccionadas” y eliminarlas, para posteriormente Aceptar los cambios.
+#### Start Date and End Date
+- In this case, you can specify the range of dates the plugin will use to search for images.
+- By default, the plugin searches for images from 7 (seven) days before the query date.
 
+#### Cloud Cover
+- You can determine the maximum percentage of cloud cover the filtered collections should have.
 
+#### Record Limit
+- You can set a maximum limit on the number of records for the collections you search for. The plugin is configured with a maximum of 10 records by default, but the user can modify it as desired.
 
-### Filtros
-Antes de realizar la búsqueda de colecciones, se pueden establecer varios criterios de búsqueda complementarios:
-+ Fecha desde
-+ Fecha hasta
-+ Nubosidad
-+ Límite de registros
+### Search and Listing
+- Once you have defined the search area, catalogs, collections, and filters, you can proceed with the search.
+- The search results will display a maximum of 10 (ten) records, as set in the Filters.
+- The results can be sorted in ascending or descending order based on the acquisition date.
 
-#### Fecha desde y Fecha hasta
-En este caso, se puede determinar la amplitud de fechas desde y hasta las cuales el plugin buscará las imágenes.
+### Results Functions
+- You will find three functions:
+  - Information
+  - Quick View
+  - Download
 
-Por default, el plugin busca imágenes desde 7 (siete) días antes de la fecha de consulta.
+#### Information
+- The "i" icon refers to the general information of the selected collection.
+- A window with additional information will open.
 
-#### Nubosidad
-Se puede determinar el porcentaje máximo de nubosidad que tendrían que tener las colecciones filtradas.
+#### Quick View
+- Using the eye icon button, the user can quickly view the selected image. The quick view includes a footprint (image coverage) and a raster preview.
 
-#### Límite de registros
-Se puede establecer un límite máximo de registros sobre colecciones buscadas. El plugin viene configurado con 10 registros máximo, pero el usuario puede modificarlo a gusto.
-
-### Buscar y listado
-Una vez establecido el área de búsqueda, los catálogos y colecciones y los filtros, se procede a realizar la búsqueda.
-
-Los resultados de la búsqueda serán, como máximo, 10 (diez) registros, de acuerdo a lo seteado en los Filtros.
-
-Los resultados pueden ordenarse ascendente o descendente según la fecha de adquisición.
-
-### Funciones de los resultados
-Se pueden ver tres funciones:
-+ Información
-+ Vista rápida
-+ Descarga
-
-#### Información
-El ícono de la “i” hace referencia a la información general de la colección seleccionada.
-
-Se abrirá la ventana con información complementaria
-
-
-#### Vista rápida
-Mediante el botón del ojo, el usuario podrá observar una vista rápida de la imagen seleccionada. La vista rápida consiste en una pisada (alcance de la imagen) y una previsualización del ráster.
-
-
-
-#### Descarga
-A desarrollar.
-
-
+#### Download
+- To be developed.
