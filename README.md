@@ -19,7 +19,7 @@ pip install mkdocs
 ```
 ### Build and run the Application Locally
 
-cd into the project dashboard folder
+cd into the project folder
 
 ```bash
 mkdocs serve
