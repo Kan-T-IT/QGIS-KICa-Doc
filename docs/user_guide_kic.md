@@ -15,7 +15,7 @@
 
    ![Plugin Window](../image/install_zip.png)
 
-5. Once loaded, click on "Install Plugin" and wait for it to finish installing. Once installed, you will see the "Kan Imagery Catalog" icon in the "Plugins" toolbar.
+5. Once loaded, click on "Install Plugin" and wait for it to finish installing. Once installed, docs/index.mdyou will see the "Kan Imagery Catalog" icon in the "Plugins" toolbar.
 
    ![Plugin Window](../image/installed_plugin.png)
 
@@ -74,6 +74,7 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 
 ### Search Area
 - With the search area, the user can define the bounding box over which the plugin will search for image availability.
+
 - You can use the extent of what is currently visible in QGIS, meaning you can use "Use the visible area on the screen" in this case, or you can select a polygon geometry layer used in the current QGIS project.
 
   ![Plugin Window](../image/search.png)
@@ -148,6 +149,8 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 - Using the eye icon button, the user can quickly view the selected image. The quick view includes a footprint (image coverage) and a raster preview.
 
   ![Plugin Window](../image/result_quick_view.png)
+
+  ![Plugin Window](../image/result_quick_view_answer.png)
 
 #### Download
 - To be developed.
