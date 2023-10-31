@@ -1,5 +1,7 @@
-# ¡Bienvenida!
-Bienvenidos al manual de usuario del plugin QGIS Kan Imagery Catalog, elaborado por Kan Territory & IT para consultar disponibilidad, comprar y descargar imágenes en formato ráster desde QGIS. Este plugin permite la consulta de imágenes en formato ráster a distintos proveedores como UP42, Planet y Sentinel Hub.
+# User Guide
 
-## Objetivo del documento
-El presente documento tiene como objetivo servir de guía de usuario para cualquier persona que esté interesada en utilizar el plugin QGIS de Kan Imagery Catalog.
+## Welcome 
+Welcome to the user manual of the QGIS plugin Kan Imagery Catalog, developed by Kan Territory & IT to consult availability of images in an area in an agnostic way, having as main objective to solve the need and not to focus on suppliers. In the beginning, satellite imagery providers (free and commercial) are incorporated, but it is planned to incorporate drone imagery among others.
+
+## Purpose of the document
+This document is intended as a user guide for anyone interested in using the Kan Imagery Catalog QGIS plugin.
