@@ -3,4 +3,5 @@ site_url: https://example.com/
 nav:
   - Home: index.md
   - User: user_guide_kic.md
-theme: readthedocs
+theme: 
+  name: 'material'
