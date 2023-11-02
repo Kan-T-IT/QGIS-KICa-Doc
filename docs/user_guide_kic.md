@@ -35,7 +35,7 @@ When you open the Kan Imagery Catalog plugin, it will appear on the right side o
 To use the Kan Imagery Catalog plugin, the first thing to do is to configure the credentials that will be used to connect to different image providers.
 
 #### Credentials UP42
-- At this point, we will proceed with configuring the credentials for UP42. To proceed, you need a username and password on the provider's platform. To sign up, you can visit [https://console.up42.com/log-in](https://console.up42.com/log-in).
+- At this point, we will proceed with configuring the credentials for UP42. To proceed, you need a username and password on the provider's platform. To sign up, you can visit <a href="https://console.up42.com/log-in" target="_blank">https://console.up42.com/log-in</a>.
 
 - Once you have enabled your user and loaded the first project, you can access the information required by the plugin to use it.
 
