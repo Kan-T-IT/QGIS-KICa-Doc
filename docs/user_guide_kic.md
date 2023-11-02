@@ -154,6 +154,6 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
   ![Plugin Window](./image/result_quick_view_answer.png)
 
 #### Download
-- To be developed.
+- Using the download button, it sends you directly to the providers catalog in order to download the selected image.
 
   ![Plugin Window](./image/results_download.png)
