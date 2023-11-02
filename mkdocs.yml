@@ -5,7 +5,7 @@ nav:
   - User guide: user_guide_kic.md
 
 theme: 
-  name: 'readthedocs' #material
+  name: 'material'
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
   icon:
