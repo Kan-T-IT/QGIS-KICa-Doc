@@ -5,24 +5,24 @@
 2. Once downloaded, open QGIS (it is recommended to use the latest stable version).
 3. In the toolbar, go to **Plugins** and select "Manage and Install Plugins."
 
-   ![Plugin Window](../image/manage_plugins.png)
+   ![Plugin Window](./image/manage_plugins.png)
 
    A window like the following will open:
 
-   ![Plugin Window](../image/plugins.png)
+   ![Plugin Window](./image/plugins.png)
 
 4. To install the plugin, you need to go to "Install from ZIP" and select the location of the previously downloaded ZIP file from your local disk.
 
-   ![Plugin Window](../image/install_zip.png)
+   ![Plugin Window](./image/install_zip.png)
 
 5. Once loaded, click on "Install Plugin" and wait for it to finish installing. Once installed, docs/index.mdyou will see the "Kan Imagery Catalog" icon in the "Plugins" toolbar.
 
-   ![Plugin Window](../image/installed_plugin.png)
+   ![Plugin Window](./image/installed_plugin.png)
 
 ## Plugin
 When you open the Kan Imagery Catalog plugin, it will appear on the right side of the QGIS screen with the following sections:
 
-   ![Plugin Window](../image/plugin.png)
+   ![Plugin Window](./image/plugin.png)
 
 - **Configuration**
 - **Search Area**
@@ -37,7 +37,7 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 - At this point, we will proceed with configuring the credentials for UP42. To proceed, you need a username and password on the provider's platform. To sign up, you can visit [https://console.up42.com/log-in](https://console.up42.com/log-in).
 - Once you have enabled your user and loaded the first project, you can access the information required by the plugin to use it.
 
-   ![Plugin Window](../image/up42.png)
+   ![Plugin Window](./image/up42.png)
 
 - The plugin requests the following information to connect to the provider:
   - **Project ID**
@@ -45,11 +45,11 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 
   *Hint:* You can find this information on the UP42 portal > Projects > Developers.
 
-   ![Plugin Window](../image/up42_hint.png)
+   ![Plugin Window](./image/up42_hint.png)
 
 - After loading the necessary data, you can verify the credentials.
 
-   ![Plugin Window](../image/up42_valid_credentials.png)
+   ![Plugin Window](./image/up42_valid_credentials.png)
 
   - If they are valid, you will see the message **"Credentials are valid."**
 
@@ -68,7 +68,7 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
   - **Maximum Number of Catalogs**
   - **Maximum Number of Objects per Catalog**
 
-  ![Plugin Window](../image/conf_app.png)
+  ![Plugin Window](./image/conf_app.png)
 
 - Once the general parameters are set, apply the changes by clicking **OK**.
 
@@ -77,26 +77,26 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 
 - You can use the extent of what is currently visible in QGIS, meaning you can use "Use the visible area on the screen" in this case, or you can select a polygon geometry layer used in the current QGIS project.
 
-  ![Plugin Window](../image/search.png)
+  ![Plugin Window](./image/search.png)
 
 ### Catalog Selection
 - In this section, the user can select the catalogs and collections they want to query.
 
-  ![Plugin Window](../image/catalog_selection.png)
+  ![Plugin Window](./image/catalog_selection.png)
 
 - In the search by name or description field, the user can filter by the value they enter. If left blank and filtered, all catalogs from the provider(s) being queried will be listed.
 - For example, if you enter "Sentinel" in the search field and filter:
 
-  ![Plugin Window](../image/up42_sentinel_search.png)
+  ![Plugin Window](./image/up42_sentinel_search.png)
 
   - By selecting the catalog in the first window and clicking "Add Selected," the collections will move to the second window. To proceed with these preferences, click "OK."
   
-    ![Plugin Window](../image/up42_accept_search.png)
+    ![Plugin Window](./image/up42_accept_search.png)
 
 #### Remove Catalogs and Collections
 - If the user wants to exclude the collections they had previously set, they should reopen the Catalog Selection window, select the "Selected Collections," and remove them before clicking OK to save the changes.
 
-  ![Plugin Window](../image/delete_catalog.png)
+  ![Plugin Window](./image/delete_catalog.png)
 
 ### Filters
 - Before searching for collections, you can set various supplementary search criteria:
@@ -105,13 +105,13 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
   - Cloud Cover
   - Record Limit
 
-  ![Plugin Window](../image/filters.png)
+  ![Plugin Window](./image/filters.png)
 
 #### Start Date and End Date
 - In this case, you can specify the range of dates the plugin will use to search for images.
 - By default, the plugin searches for images from 7 (seven) days before the query date.
 
-  ![Plugin Window](../image/date_filter.png)
+  ![Plugin Window](./image/date_filter.png)
 
 #### Cloud Cover
 - You can determine the maximum percentage of cloud cover the filtered collections should have.
@@ -122,11 +122,11 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 ### Search and Listing
 - Once you have defined the search area, catalogs, collections, and filters, you can proceed with the search.
 
-  ![Plugin Window](../image/search_list.png)
+  ![Plugin Window](./image/search_list.png)
 
 - The search results will display a maximum of 10 (ten) records, as set in the Filters.
 
-  ![Plugin Window](../image/result.png)
+  ![Plugin Window](./image/result.png)
 
 - The results can be sorted in ascending or descending order based on the acquisition date.
 
@@ -139,20 +139,20 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 #### Information
 - The "i" icon refers to the general information of the selected collection.
 
-  ![Plugin Window](../image/result_info.png)
+  ![Plugin Window](./image/result_info.png)
 
 - A window with additional information will open.
 
-  ![Plugin Window](../image/info.png)
+  ![Plugin Window](./image/info.png)
 
 #### Quick View
 - Using the eye icon button, the user can quickly view the selected image. The quick view includes a footprint (image coverage) and a raster preview.
 
-  ![Plugin Window](../image/result_quick_view.png)
+  ![Plugin Window](./image/result_quick_view.png)
 
-  ![Plugin Window](../image/result_quick_view_answer.png)
+  ![Plugin Window](./image/result_quick_view_answer.png)
 
 #### Download
 - To be developed.
 
-  ![Plugin Window](../image/results_download.png)
+  ![Plugin Window](./image/results_download.png)
