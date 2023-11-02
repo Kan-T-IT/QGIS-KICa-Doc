@@ -1,7 +1,7 @@
 # User Guide
 
 ## Plugin Installation
-1. Download the compressed plugin from [this link](https://github.com/Kan-T-IT/QGIS-imagery-catalogue).
+1. Download the compressed plugin from [this link](https://github.com/Kan-T-IT/QGIS-KICa-Doc).
 2. Once downloaded, open QGIS (it is recommended to use the latest stable version).
 3. In the toolbar, go to **Plugins** and select "Manage and Install Plugins."
 
