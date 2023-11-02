@@ -1,6 +1,33 @@
-site_name: Plugin Kan Imagery Catalog
-site_url: https://example.com/
+site_name: KICa - QGIS Plugin Kan Imagery Catalog
+site_url: https://kan.com.ar/
 nav:
   - Home: index.md
-  - User: user_guide_kic.md
-theme: readthedocs
+  - User guide: user_guide_kic.md
+
+theme: 
+  name: 'material'
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    repo: fontawesome/brands/github
+  features:
+    - search.suggest
+
+plugins:
+  - search
+extra:
+  homepage: https://kan.com.ar
+  analytics:
+    provider: google
+    property: G-E7XJKS2PK3
+  alternate:
+    - name: English
+      lang: en
+    - name: Spanish
+      lang: es
+repo_url: https://github.com/Kan-T-IT/QGIS-KICa-Doc
+
+
+  
