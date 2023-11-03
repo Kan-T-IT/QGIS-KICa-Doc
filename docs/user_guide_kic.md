@@ -1,7 +1,8 @@
 # User Guide
 
 ## Plugin Installation
-1. Download the compressed plugin from [this link](https://github.com/Kan-T-IT/QGIS-KICa-Doc).
+1. Download the compressed plugin from <a href="https://github.com/Kan-T-IT/QGIS-KICa/releases" target="_blank">this link</a>.
+
 2. Once downloaded, open QGIS (it is recommended to use the latest stable version).
 3. In the toolbar, go to **Plugins** and select "Manage and Install Plugins."
 
@@ -34,7 +35,8 @@ When you open the Kan Imagery Catalog plugin, it will appear on the right side o
 To use the Kan Imagery Catalog plugin, the first thing to do is to configure the credentials that will be used to connect to different image providers.
 
 #### Credentials UP42
-- At this point, we will proceed with configuring the credentials for UP42. To proceed, you need a username and password on the provider's platform. To sign up, you can visit [https://console.up42.com/log-in](https://console.up42.com/log-in).
+- At this point, we will proceed with configuring the credentials for UP42. To proceed, you need a username and password on the provider's platform. To sign up, you can visit <a href="https://console.up42.com/log-in" target="_blank">https://console.up42.com/log-in</a>.
+
 - Once you have enabled your user and loaded the first project, you can access the information required by the plugin to use it.
 
    ![Plugin Window](./image/up42.png)
@@ -153,6 +155,6 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
   ![Plugin Window](./image/result_quick_view_answer.png)
 
 #### Download
-- To be developed.
+- Using the download button, it sends you directly to the providers catalog in order to download the selected image.
 
   ![Plugin Window](./image/results_download.png)
