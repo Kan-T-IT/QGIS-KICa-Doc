@@ -58,7 +58,7 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 #### Credentials Sentinel Hub
 - At this point, we will proceed with configuring the credentials for Sentinel Hub. To proceed, you need a username and password on the provider's platform. To sign up, you can visit sentinel-hub <a href="https://apps.sentinel-hub.com/dashboard/#/account/settings" target="_blank">account settings</a>.
 
-- Once you have enabled your user, you need to register an OAuth Client in your account settings in order to access the information required by the plugin to use it.
+- Once you have enabled your user, you need to register an OAuth Client in your account settings to access the information required by the plugin to use it.
 
    ![Plugin Window](./image/sentinel.png)
 
