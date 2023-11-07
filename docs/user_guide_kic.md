@@ -74,6 +74,9 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 
   - If they are valid, you will see the message **"Credentials are valid."**
 
+#### Credentials Microsoft
+- Microsoft Planetary Computer Data Catalog is freely accessible therefore is already incorporated in the plugin and credentials are not necessary.
+
 #### Credentials Planet
 - Coming next
 
