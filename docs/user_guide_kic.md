@@ -42,12 +42,10 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
    ![Plugin Window](./image/up42.png)
 
 - The plugin requests the following information to connect to the provider:
-  - **Project ID**
-  - **API ID**
+  - **Username**
+  - **Password**
 
   *Hint:* You can find this information on the UP42 portal > Projects > Developers.
-
-   ![Plugin Window](./image/up42_hint.png)
 
 - After loading the necessary data, you can verify the credentials.
 
@@ -82,10 +80,8 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 
 #### General Parameters
 - In addition to loading credentials, the user can set the following parameters:
-  - **Language:** Choose from Spanish, English, or Portuguese.
   - **Number of Query Days**
   - **Default Maximum Cloud Cover:** Can vary between 0 and 100%.
-  - **Download Path**
   - **Maximum Number of Catalogs**
   - **Maximum Number of Objects per Catalog**
 
