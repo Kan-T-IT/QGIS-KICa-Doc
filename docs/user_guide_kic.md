@@ -42,12 +42,10 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
    ![Plugin Window](./image/up42.png)
 
 - The plugin requests the following information to connect to the provider:
-  - **Project ID**
-  - **API ID**
+  - **Username**
+  - **Password**
 
   *Hint:* You can find this information on the UP42 portal > Projects > Developers.
-
-   ![Plugin Window](./image/up42_hint.png)
 
 - After loading the necessary data, you can verify the credentials.
 
@@ -82,10 +80,8 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 
 #### General Parameters
 - In addition to loading credentials, the user can set the following parameters:
-  - **Language:** Choose from Spanish, English, or Portuguese.
   - **Number of Query Days**
   - **Default Maximum Cloud Cover:** Can vary between 0 and 100%.
-  - **Download Path**
   - **Maximum Number of Catalogs**
   - **Maximum Number of Objects per Catalog**
 
@@ -96,9 +92,13 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
 ### Search Area
 - With the search area, the user can define the bounding box over which the plugin will search for image availability.
 
-- You can use the extent of what is currently visible in QGIS, meaning you can use "Use the visible area on the screen" in this case, or you can select a polygon geometry layer used in the current QGIS project.
+- You can use the extent of what is currently visible in QGIS, meaning you can use "Use the visible area on the screen", or you can select a polygon geometry layer used in the current QGIS project. For default use visible area is checked. 
 
   ![Plugin Window](./image/search.png)
+
+  If you unchecked it, you can search by a vector file, such as polygon
+
+  ![Plugin Window](./image/search_feature.png)
 
 ### Catalog Selection
 - In this section, the user can select the catalogs and collections they want to query.
@@ -150,6 +150,10 @@ To use the Kan Imagery Catalog plugin, the first thing to do is to configure the
   ![Plugin Window](./image/result.png)
 
 - The results can be sorted in ascending or descending order based on the acquisition date.
+
+- If you have selected to use a polygon as search area, before beginning the search you should have selected the feature beforehand.
+
+  ![Plugin Window](./image/result_by_feature.png)
 
 ### Results Functions
 - You will find three functions:
