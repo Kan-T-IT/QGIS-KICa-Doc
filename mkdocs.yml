@@ -2,9 +2,15 @@ site_name: KICa - QGIS Plugin Kan Imagery Catalog
 site_url: https://kan.com.ar/
 nav:
   - Home: index.md
-  - User guide: user_guide_kic.md
+  - instalation.md
+  - plugin.md
 
-theme: 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+theme:
   name: 'material'
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
@@ -17,6 +23,20 @@ theme:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true
+        - locale: pt
+          name: Português
+          build: true
+
 extra:
   homepage: https://kan.com.ar
   analytics:
@@ -25,8 +45,13 @@ extra:
   alternate:
     - name: English
       lang: en
-    - name: Spanish
+    - name: Español
       lang: es
+      link: es/
+    - name: Portuguese
+      lang: pt
+      link: pt/
+
 repo_url: https://github.com/Kan-T-IT/QGIS-KICa-Doc
 
 
