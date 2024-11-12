@@ -20,6 +20,7 @@ theme:
     repo: fontawesome/brands/github
   features:
     - search.suggest
+    - navigation.footer
 
 plugins:
   - search
