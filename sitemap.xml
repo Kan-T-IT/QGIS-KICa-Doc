@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://kan.com.ar/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/instalation/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/instalation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/instalation/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/instalation/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/plugin/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/plugin/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/plugin/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/plugin/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/es/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/es/instalation/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/instalation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/instalation/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/instalation/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/es/plugin/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/plugin/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/plugin/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/plugin/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/pt/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/pt/instalation/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/instalation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/instalation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/instalation/"/>
+    </url>
+    <url>
+        <loc>https://kan.com.ar/pt/plugin/</loc>
+        <lastmod>2024-11-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://kan.com.ar/pt/plugin/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://kan.com.ar/plugin/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://kan.com.ar/es/plugin/"/>
+    </url>
+</urlset>

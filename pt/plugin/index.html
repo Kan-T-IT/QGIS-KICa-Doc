@@ -1,0 +1,977 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kan.com.ar/pt/plugin/">
+      
+      
+        <link rel="prev" href="../instalation/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Plugin - KICa - QGIS Plugin Kan Imagery Catalog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-E7XJKS2PK3"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-E7XJKS2PK3",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-E7XJKS2PK3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plugin" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="https://kan.com.ar" title="KICa - QGIS Plugin Kan Imagery Catalog" class="md-header__button md-logo" aria-label="KICa - QGIS Plugin Kan Imagery Catalog" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KICa - QGIS Plugin Kan Imagery Catalog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plugin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../plugin/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/plugin/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Kan-T-IT/QGIS-KICa-Doc" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://kan.com.ar" title="KICa - QGIS Plugin Kan Imagery Catalog" class="md-nav__button md-logo" aria-label="KICa - QGIS Plugin Kan Imagery Catalog" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    KICa - QGIS Plugin Kan Imagery Catalog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Kan-T-IT/QGIS-KICa-Doc" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalação do Plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Plugin
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Plugin
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-up42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais UP42
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-sentinel-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Sentinel Hub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Microsoft
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-planeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Planeta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-gerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros gerais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-de-pesquisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Área de Pesquisa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecao-de-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleção de catálogo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seleção de catálogo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remover-catalogos-e-colecoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remover catálogos e coleções
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-de-inicio-e-data-de-termino" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data de início e data de término
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-de-nuvens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cobertura de nuvens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limite de registro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisar-e-listagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pesquisar e Listagem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções de resultados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funções de resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visao-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão rápida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-up42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais UP42
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-sentinel-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Sentinel Hub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Microsoft
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credenciais-planeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credenciais Planeta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros-gerais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros gerais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#area-de-pesquisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Área de Pesquisa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecao-de-catalogo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seleção de catálogo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seleção de catálogo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remover-catalogos-e-colecoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remover catálogos e coleções
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-de-inicio-e-data-de-termino" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data de início e data de término
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-de-nuvens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cobertura de nuvens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limite-de-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limite de registro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisar-e-listagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pesquisar e Listagem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-de-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções de resultados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funções de resultados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visao-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visão rápida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="plugin">Plugin</h1>
+<p>Ao abrir o plugin Kan Imagery Catalog, ele aparecerá no lado direito da tela do QGIS com as seguintes seções:</p>
+<p><img alt="Plugin Window" src="../../image/plugin.png" /></p>
+<ul>
+<li><strong>Configuração</strong></li>
+<li><strong>Área de Pesquisa</strong></li>
+<li><strong>Seleção de catálogo</strong></li>
+<li><strong>Filtros</strong></li>
+<li><strong>Listagem</strong></li>
+</ul>
+<h2 id="configuracao">Configuração</h2>
+<p>Para utilizar o plugin Kan Imagery Catalog, a primeira coisa a fazer é configurar as credenciais que serão usadas para se conectar a diferentes provedores de imagens.</p>
+<h3 id="credenciais-up42">Credenciais UP42</h3>
+<p>Neste ponto, vamos proceder à configuração das credenciais para UP42. Para continuar, você precisa de um nome de usuário e senha na plataforma do provedor. Para se cadastrar, você pode visitar <a href="https://console.up42.com/log-in" target="_blank">https://console.up42.com/log-in</a>.</p>
+<p>Depois de habilitar seu usuário e carregar o primeiro projeto, você poderá acessar as informações necessárias para utilizar o plugin.</p>
+<p><img alt="Plugin Window" src="../../image/up42.png" /></p>
+<p>O plugin solicita as seguintes informações para se conectar ao provedor:</p>
+<ul>
+<li><strong>Nome de usuário</strong></li>
+<li><strong>Senha</strong></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Você pode encontrar essas informações no portal da UP42 &gt; Projetos &gt; Desenvolvedores.</p>
+</div>
+<p>Após carregar os dados necessários, você pode verificar as credenciais.</p>
+<p><img alt="Plugin Window" src="../../image/up42_valid_credentials.png" /></p>
+<p>Se forem válidas, verá a mensagem <strong>"As credenciais são válidas."</strong></p>
+<h3 id="credenciais-sentinel-hub">Credenciais Sentinel Hub</h3>
+<p>Neste ponto, vamos proceder à configuração das credenciais para Sentinel Hub. Para continuar, você precisa de um nome de usuário e senha na plataforma do provedor. Para se cadastrar, você pode visitar as <a href="https://apps.sentinel-hub.com/dashboard/#/account/settings" target="_blank">configurações de conta de sentinel-hub</a>.</p>
+<p>Depois de habilitar seu usuário, é necessário registrar um Cliente OAuth nas configurações da sua conta para acessar as informações necessárias para utilizar o plugin.</p>
+<p><img alt="Plugin Window" src="../../image/sentinel.png" /></p>
+<p>O plugin solicita as seguintes informações para se conectar ao provedor:</p>
+<ul>
+<li><strong>Client ID</strong></li>
+<li><strong>Client secret</strong></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Siga a <a href="https://docs.sentinel-hub.com/api/latest/api/overview/authentication/#registering-oauth-client" target="_blank">documentação de sentinel-hub</a>.</p>
+</div>
+<p>Após carregar os dados necessários, você pode verificar as credenciais.</p>
+<p><img alt="Plugin Window" src="../../image/sentinel_valid_credentials.png" /></p>
+<p>Se forem válidas, você verá a mensagem <strong>"As credenciais são válidas."</strong></p>
+<h3 id="credenciais-microsoft">Credenciais Microsoft</h3>
+<p>O catálogo de dados do Microsoft Planetary Computer é de acesso livre, portanto, já está incorporado no plugin e não é necessário inserir credenciais.</p>
+<h3 id="credenciais-planeta">Credenciais Planeta</h3>
+<p>Próximo</p>
+<h3 id="parametros-gerais">Parâmetros gerais</h3>
+<p>Além de carregar credenciais, o usuário pode configurar os seguintes parâmetros:</p>
+<ul>
+<li><strong>Número de Dias de Consulta</strong></li>
+<li><strong>Cobertura Máxima de Nuvens Padrão</strong>: Pode variar entre 0 e 100%.</li>
+<li><strong>Número Máximo de Catálogos</strong></li>
+<li><strong>Número Máximo de Objetos por Catálogo</strong></li>
+</ul>
+<p><img alt="Plugin Window" src="../../image/conf_app.png" /></p>
+<p>Após configurar os parâmetros gerais, aplique as alterações clicando em <strong>OK</strong>.</p>
+<h2 id="area-de-pesquisa">Área de Pesquisa</h2>
+<p>Após configurar os parâmetros gerais, aplique as alterações clicando em OK.</p>
+<p>Você pode usar a extensão do que está visível atualmente no QGIS selecionando "Usar área visível na tela" ou escolher uma camada de geometria de polígono que está sendo usada no projeto atual do QGIS.</p>
+<p>Se a opção "Usar área visível na tela" for selecionada, o plugin reconhecerá a área visível no canvas como a área de busca.</p>
+<p><img alt="Plugin Window" src="../../image/search_area.png" /></p>
+<p>Para usar a área de uma camada vetorial, ela deve estar carregada no projeto. O usuário deve desmarcar "Usar área visível na tela", o que exibirá uma lista de camadas disponíveis.</p>
+<p><img alt="Plugin Window" src="../../image/search_area_visible.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ao utilizar uma camada vetorial como área de busca, recomenda-se o EPSG 4326.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No caso de camadas vetoriais de multipolígono, se um objeto espacial for selecionado, o plugin o reconhecerá como a área de busca. Caso contrário, o plugin selecionará aleatoriamente um objeto espacial da camada para definir a área de busca.</p>
+</div>
+<h2 id="selecao-de-catalogo">Seleção de catálogo</h2>
+<p>Nesta seção, o usuário pode selecionar os catálogos e coleções que deseja consultar.</p>
+<p><img alt="Plugin Window" src="../../image/catalog_selection.png" /></p>
+<p>No campo de pesquisa por nome ou descrição, o usuário pode filtrar pelo valor que inserir. Se deixado em branco e filtrado, todos os catálogos dos provedores consultados serão listados.
+Por exemplo, se você inserir "Sentinel" no campo de pesquisa e filtrar:</p>
+<p><img alt="Plugin Window" src="../../image/up42_sentinel_search.png" /></p>
+<p>Ao selecionar o catálogo na primeira janela e clicar em "Adicionar Selecionados", as coleções se moverão para a segunda janela. Para prosseguir com essas preferências, clique em <strong>OK</strong>.</p>
+<pre><code>![Plugin Window](./image/up42_accept_search.png)
+</code></pre>
+<h3 id="remover-catalogos-e-colecoes">Remover catálogos e coleções</h3>
+<p>Se o usuário quiser excluir as coleções que havia configurado anteriormente, ele deve reabrir a janela de Seleção de Catálogos, selecionar as "Coleções Selecionadas" e removê-las antes de clicar em OK para salvar as alterações.</p>
+<p><img alt="Plugin Window" src="../../image/delete_catalog.png" /></p>
+<h2 id="filtros">Filtros</h2>
+<p>Antes de buscar coleções, você pode definir vários critérios de busca complementares:</p>
+<ul>
+<li>Data de início</li>
+<li>Data de término</li>
+<li>Cobertura de nuvens</li>
+<li>Limite de registro</li>
+</ul>
+<p><img alt="Plugin Window" src="../../image/filters.png" /></p>
+<h3 id="data-de-inicio-e-data-de-termino">Data de início e data de término</h3>
+<p>Neste caso, você pode especificar o intervalo de datas que o plugin usará para buscar imagens.
+Por padrão, o plugin busca imagens de 7 (sete) dias antes da data de consulta.</p>
+<p><img alt="Plugin Window" src="../../image/date_filter.png" /></p>
+<h3 id="cobertura-de-nuvens">Cobertura de nuvens</h3>
+<p>Você pode determinar a porcentagem máxima de cobertura de nuvens que as coleções filtradas devem ter.</p>
+<h3 id="limite-de-registro">Limite de registro</h3>
+<p>Você pode definir um limite máximo para o número de registros das coleções que busca. O plugin está configurado com um máximo de 10 registros por padrão, mas o usuário pode modificá-lo conforme desejar.</p>
+<h2 id="pesquisar-e-listagem">Pesquisar e Listagem</h2>
+<p>Depois de definir a área de busca, os catálogos, as coleções e os filtros, você pode prosseguir com a busca.</p>
+<p><img alt="Plugin Window" src="../../image/search_list.png" /></p>
+<p>Os resultados da busca exibirão um máximo de 10 (dez) registros, conforme definido nos Filtros.</p>
+<p><img alt="Plugin Window" src="../../image/result.png" /></p>
+<p>Os resultados podem ser ordenados em ordem crescente ou decrescente com base na data de aquisição.</p>
+<p>Se você selecionou usar um polígono como área de busca, antes de iniciar a busca deve ter selecionado a entidade previamente.</p>
+<p><img alt="Plugin Window" src="../../image/result_by_feature.png" /></p>
+<h2 id="funcoes-de-resultados">Funções de resultados</h2>
+<p>Você encontrará três funções:</p>
+<ul>
+<li>Informação</li>
+<li>Visão rápida</li>
+<li>Download</li>
+</ul>
+<h3 id="informacao">Informação</h3>
+<p>O ícone "i" refere-se às informações gerais da coleção selecionada.</p>
+<p><img alt="Plugin Window" src="../../image/result_info.png" /></p>
+<p>Uma janela com informações adicionais será aberta.</p>
+<p><img alt="Plugin Window" src="../../image/info.png" /></p>
+<h3 id="visao-rapida">Visão rápida</h3>
+<p>Usando o botão com o ícone de olho, o usuário pode ver rapidamente a imagem selecionada. A visualização rápida inclui um footprint (cobertura da imagem) e uma visualização raster.</p>
+<p><img alt="Plugin Window" src="../../image/result_quick_view.png" /></p>
+<p><img alt="Plugin Window" src="../../image/result_quick_view_answer.png" /></p>
+<h3 id="download">Download</h3>
+<p>Usando o botão de download, você será enviado diretamente para o catálogo do provedor para baixar a imagem selecionada.</p>
+<p><img alt="Plugin Window" src="../../image/results_download.png" /></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../instalation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Instalação do Plugin">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Instalação do Plugin
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "navigation.footer"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
